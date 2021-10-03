@@ -1,13 +1,12 @@
 import React, { useState, useEffect } from "react";
 import { View } from "react-native";
 import { createStackNavigator } from "@react-navigation/stack";
-import LoginScreen from "../screens/LoginScreen";
+import LoginScreen from "../screens/LoginScreen/LoginScreen";
 import OnBoard from "../components/OnBoard";
 
 import FontAwesome from "react-native-vector-icons/FontAwesome";
-import SignUpScreen from "../screens/SignUpScreen";
+import SignUpScreen from "../screens/SignUpScreen/SignUpScreen";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
-import Home from "../screens/HomeScreen";
 
 const Stack = createNativeStackNavigator();
 

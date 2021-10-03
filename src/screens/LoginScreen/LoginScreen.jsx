@@ -7,9 +7,9 @@ import {
     Platform,
     ScrollView,
 } from "react-native";
-import FormInput from "../components/FormInput";
-import FormButton from "../components/FormButton";
-import SocialButton from "../components/SocialButton";
+import FormInput from "../../components/FormInput";
+import FormButton from "../../components/FormButton";
+import SocialButton from "../../components/SocialButton";
 
 import styles from "./LoginScreenStyles";
 
@@ -19,7 +19,7 @@ const LoginScreen = ({ navigation }) => {
 
     return (
         <ScrollView contentContainerStyle={styles.container}>
-            <Image source={require("../../assets/1.png")} style={styles.logo} />
+            <Image source={require("../../../assets/1.png")} style={styles.logo} />
             <Text style={styles.text}>RN Social App</Text>
 
           

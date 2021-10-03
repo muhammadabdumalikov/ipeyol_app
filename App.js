@@ -5,10 +5,6 @@ import firebase from "firebase8/app"
 
 import OnBoard from "./src/components/OnBoard";
 import Providers from "./src/navigation/index";
-import Routes from "./src/navigation/Routes";
-import Home from "./src/screens/HomeScreen";
-import LoginScreen from "./src/screens/LoginScreen";
-import SignUpScreen from "./src/screens/SignUpScreen";
 
 const firebaseConfig = {
   apiKey: "AIzaSyC4IXChdpAysWDemp4LWehvdXkfvlImXaY",

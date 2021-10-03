@@ -9,13 +9,13 @@ import {
 import { Ionicons } from "@expo/vector-icons";
 import DateTimePicker from "@react-native-community/datetimepicker";
 
-import { AuthContext } from "../navigation/AuthProvider.android";
+import { AuthContext } from "../../navigation/AuthProvider.android";
 
-import FormInput from "../components/FormInput";
-import FormButton from "../components/FormButton";
-import SocialButton from "../components/SocialButton";
+import FormInput from "../../components/FormInput";
+import FormButton from "../../components/FormButton";
+import SocialButton from "../../components/SocialButton";
 import styles from "./SignUpScreenStyles";
-import Color from "../constants/Color";
+import Color from "../../constants/Color";
 
 const SignUpScreen = ({ navigation }) => {
     const [email, setEmail] = useState();
