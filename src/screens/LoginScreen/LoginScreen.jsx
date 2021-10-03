@@ -7,15 +7,18 @@ import {
     Platform,
     ScrollView,
 } from "react-native";
+
 import FormInput from "../../components/FormInput";
 import FormButton from "../../components/FormButton";
 import SocialButton from "../../components/SocialButton";
-
 import styles from "./LoginScreenStyles";
+import { AuthContext } from "../../navigation/AuthProvider.android";
 
 const LoginScreen = ({ navigation }) => {
     const [email, setEmail] = useState();
     const [password, setPassword] = useState();
+
+    const { login } = useContext(AuthContext);
 
     return (
         <ScrollView contentContainerStyle={styles.container}>
@@ -41,7 +44,7 @@ const LoginScreen = ({ navigation }) => {
                 secureTextEntry={true}
             />
 
-            <FormButton buttonTitle="Sign In" onPress={() => {}} />
+            <FormButton buttonTitle="Sign In" onPress={() => {login(email, password)}} />
 
             <TouchableOpacity style={styles.forgotButton} onPress={() => {}}>
                 <Text style={styles.navButtonText}>Forgot Password?</Text>

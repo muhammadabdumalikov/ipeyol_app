@@ -2,11 +2,11 @@ import React, { useContext, useState, useEffect } from "react";
 import { NavigationContainer } from "@react-navigation/native";
 import { AuthContext } from "./AuthProvider";
 import firebase from "firebase8/app";
-import "firebase8/auth"
+import "firebase8/auth";
 
+import OnBoard from "../components/OnBoard";
 import AuthStack from "./AuthStack";
 import AppStack from "./AppStack";
-
 
 const Routes = () => {
     const { user, setUser } = useContext(AuthContext);
@@ -17,8 +17,10 @@ const Routes = () => {
         if (initializing) setInitializing(false);
     };
 
-    useEffect( () => {
-        const subscriber = firebase.auth().onAuthStateChanged(OnAuthStateChanged);
+    useEffect(() => {
+        const subscriber = firebase
+            .auth()
+            .onAuthStateChanged(OnAuthStateChanged);
         return subscriber;
     }, []);
 
@@ -26,8 +28,8 @@ const Routes = () => {
 
     return (
         <NavigationContainer>
-           { user ? <AppStack/> : <AuthStack/>}
-       </NavigationContainer>
+            {user ? <AppStack /> : <AuthStack />}
+        </NavigationContainer>
     );
 };
 
